@@ -1,8 +1,6 @@
 import { Express } from "express";
-import { getDiscount } from "./getDiscount";
-import { initMockCategories } from "./initMockCategories";
+import { getCategoryDiscountApi } from "./get/getCategoryDiscount";
 
 export const categoryRoutes = (app: Express) => {
-  app.get("/category/init", initMockCategories);
-  app.get("/category/discount", getDiscount);
+  app.get("/category/discount", getCategoryDiscountApi);
 };
