@@ -1,10 +1,13 @@
+import { categoryRoutes } from "./controllers/category";
+import { productRoutes } from "./controllers/product";
 import { startServer } from "./server";
-import { userRoutes } from "./controllers/user/index";
+
 (async function () {
   try {
-    const { app } = await startServer();
+    const app = await startServer();
 
-    userRoutes(app);
+    categoryRoutes(app);
+    productRoutes(app);
   } catch (error) {
     console.log("______index_error______", error);
   }

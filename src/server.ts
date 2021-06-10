@@ -1,6 +1,5 @@
-import express from "express";
 import dotenv from "dotenv";
-// import bodyParser from "bodyparser";
+import express, { Request, Response } from "express";
 
 export const startServer = async () => {
   try {
@@ -14,14 +13,14 @@ export const startServer = async () => {
       )
     );
 
-    app.get("/", (req, res) => {
-      console.log(req);
-      return res.send("Welcome to the offland app!");
-    });
+    app.get("/", welcome);
 
-    return { app };
+    return app;
   } catch (error) {
     console.log("\nError on start server: " + error);
     return error;
   }
 };
+
+const welcome = (_req: Request, res: Response) =>
+  res.status(200).send("welcome to our cool app");

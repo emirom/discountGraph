@@ -6,12 +6,15 @@
   "author": "amir meyari <forsite73@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "@databases/pg": "^5.1.0",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "express-generator": "^4.16.1",
     "npm": "^7.15.1",
     "pg": "^8.6.0"
   },
   "devDependencies": {
+    "@microsoft/tsdoc": "^0.13.2",
     "@types/express": "^4.17.12",
     "@types/node": "^15.6.2",
     "ts-node-dev": "^1.1.6",
